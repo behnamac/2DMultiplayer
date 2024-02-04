@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2700215767380903975}
   - component: {fileID: 2949701822962861746}
+  - component: {fileID: 4967250559856770224}
   m_Layer: 0
   m_Name: TankThreads
   m_TagString: Untagged
@@ -253,6 +254,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4967250559856770224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6960706124829616423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de32034ca2b1c54098423ca71e972dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 0
+  SyncPositionY: 0
+  SyncPositionZ: 0
+  SyncRotAngleX: 0
+  SyncRotAngleY: 0
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  UseQuaternionSynchronization: 0
+  UseQuaternionCompression: 0
+  UseHalfFloatPrecision: 0
+  InLocalSpace: 0
+  Interpolate: 1
+  SlerpPosition: 0
 --- !u!1 &7039956808855355841
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2110669574432247799}
-  - component: {fileID: 5167982376134289424}
+  - component: {fileID: 6778143619217084947}
   m_Layer: 0
   m_Name: TankPivot
   m_TagString: Untagged
@@ -286,7 +317,7 @@ Transform:
   - {fileID: 4946621755895188252}
   m_Father: {fileID: 5504862243548426155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5167982376134289424
+--- !u!114 &6778143619217084947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,7 +326,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7039956808855355841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6de32034ca2b1c54098423ca71e972dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 0
@@ -326,7 +357,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5504862243548426155}
   - component: {fileID: 8095378972448618929}
-  - component: {fileID: 2562374251268082041}
+  - component: {fileID: 4704948455847106591}
+  - component: {fileID: 1504430982751280130}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -371,7 +403,7 @@ MonoBehaviour:
   SpawnWithObservers: 1
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &2562374251268082041
+--- !u!114 &4704948455847106591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,7 +412,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8443318277988124696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6de32034ca2b1c54098423ca71e972dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SyncPositionX: 1
@@ -401,3 +433,15 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &1504430982751280130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8443318277988124696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96ffc12269c014b4b81520640190ea7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
