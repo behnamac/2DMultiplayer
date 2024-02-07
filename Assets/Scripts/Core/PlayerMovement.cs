@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -14,12 +15,37 @@ public class PlayerMovement : NetworkBehaviour
 
     [Header("Setting")]
     [SerializeField] private float speed = 3f;
+    [SerializeField] private float turnRate = 30f;
 
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+
+    private void Update()
+    {
+        if (!IsOwner) return;
+        TankRotation();
+    }
+
+    private void FixedUpdate()
+    {
+        if (!IsOwner) return;
+        TankForwardMoving();
+    }
+
+    private void TankRotation()
+    {
+        float zRotation = previousMovementInput.x * -turnRate * Time.deltaTime;
+        body.Rotate(0, 0, zRotation);
+    }
+
+    private void TankForwardMoving()
+    {
+        rb.velocity = (Vector2)body.up * previousMovementInput.y* speed;
+    }
+
 
 
     public override void OnNetworkSpawn()
@@ -35,9 +61,9 @@ public class PlayerMovement : NetworkBehaviour
     }
 
 
-    private void HandleMovment(Vector2 position)
+    private void HandleMovment(Vector2 movementInput)
     {
-
+        previousMovementInput = movementInput;
     }
 
 
