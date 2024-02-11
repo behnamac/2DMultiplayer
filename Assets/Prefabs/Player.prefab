@@ -84,6 +84,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4768789128587115526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8835811824597385876}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8835811824597385876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4768789128587115526}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.807, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2110669574432247799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6836704534855535178
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4946621755895188252}
+  - {fileID: 8835811824597385876}
   m_Father: {fileID: 5504862243548426155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6778143619217084947
@@ -362,6 +394,7 @@ GameObject:
   - component: {fileID: 4704948455847106591}
   - component: {fileID: 1504430982751280130}
   - component: {fileID: 5709276905670700497}
+  - component: {fileID: 2784354010048264561}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -398,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 578901934
+  GlobalObjectIdHash: 2197281118
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -505,3 +538,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputReader: {fileID: 11400000, guid: 05d7318a9373597488b3c1ee7b228f2f, type: 2}
   turrentTransform: {fileID: 2110669574432247799}
+--- !u!114 &2784354010048264561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8443318277988124696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61710e24c28cec041b30a4f764d95c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inputReader: {fileID: 11400000, guid: 05d7318a9373597488b3c1ee7b228f2f, type: 2}
+  spawnPoint: {fileID: 8835811824597385876}
+  projectile: {fileID: 5023025662576440111, guid: ea28383eb4a9e1d4688ab33ff40d2b3d,
+    type: 3}
+  serverProjectile: {fileID: 3794828894100463891, guid: 6556dbab848aa254c8bbea2b75c9a31c,
+    type: 3}
+  clientProjectile: {fileID: 5574223764847599257, guid: 2bec6711a2d2cde499375ac43a6bbc11,
+    type: 3}
+  speed: 5

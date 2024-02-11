@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
@@ -11,13 +12,11 @@ public class PlayerAim : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        base.OnNetworkSpawn();
         inputReader.AimEvent += getAimPosition;
     }
 
     public override void OnNetworkDespawn()
     {
-        base.OnNetworkDespawn();
         inputReader.AimEvent -= getAimPosition;
     }
 
@@ -26,12 +25,14 @@ public class PlayerAim : NetworkBehaviour
         cam = Camera.main;
     }
 
-  
+
+
+
 
     private void getAimPosition(Vector2 position)
-    {
-        if (!IsOwner) return;
-        var aimScreenPosition = cam.ScreenToWorldPoint(position);
-        turrentTransform.up = new Vector2(aimScreenPosition.x - turrentTransform.position.x, aimScreenPosition.y - turrentTransform.position.y);
+    {        
+            if (!IsOwner) return;
+            var aimScreenPosition = cam.ScreenToWorldPoint(position);
+            turrentTransform.up = new Vector2(aimScreenPosition.x - turrentTransform.position.x, aimScreenPosition.y - turrentTransform.position.y);        
     }
 }
