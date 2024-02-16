@@ -58,13 +58,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4708926947950189226, guid: ea28383eb4a9e1d4688ab33ff40d2b3d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5023025662576440111, guid: ea28383eb4a9e1d4688ab33ff40d2b3d,
         type: 3}
       propertyPath: m_Name
       value: ClientProjectile
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7678050015554878714, guid: ea28383eb4a9e1d4688ab33ff40d2b3d, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

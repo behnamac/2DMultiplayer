@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -43,7 +42,7 @@ public class PlayerMovement : NetworkBehaviour
 
     private void TankForwardMoving()
     {
-        rb.velocity = (Vector2)body.up * previousMovementInput.y* speed;
+        rb.velocity = (Vector2)body.up * previousMovementInput.y * speed;
     }
 
 
